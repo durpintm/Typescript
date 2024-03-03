@@ -8,8 +8,20 @@ interface User {
   getCoupon(couponName: string, value: number): number;
 }
 
-const durpin: User = {
+// reopening of interface
+interface User {
+  githubToken: string;
+}
+
+// interface inheritance
+interface Admin extends User {
+  role: "admin" | "ta" | "learner";
+}
+
+const durpin: Admin = {
   dbId: 11,
+  role: "admin",
+  githubToken: "github",
   email: "d@d.com",
   userId: 2222,
   startTrial: () => {
