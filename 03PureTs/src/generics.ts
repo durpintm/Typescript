@@ -27,3 +27,14 @@ interface Bootle {
 }
 
 identityFour<Bootle>({ brand: "dd", type: 6 });
+
+function getSearchProducts<T>(products: T[]): T {
+  // do some database operations
+  const myIndex = 4;
+  return products[myIndex];
+}
+
+const getMoreProducts = <T>(products: T[]): T => {
+  const myIndex = 5;
+  return products[myIndex];
+};
