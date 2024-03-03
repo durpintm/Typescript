@@ -41,5 +41,12 @@ class User {
   }
 }
 
+class SubUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this.courseCount++;
+  }
+}
+
 const durpin = new User("d@d.com", "durpintm");
 // durpin.city = "toronto";

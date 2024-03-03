@@ -35,5 +35,14 @@ class User {
         this._courseCount = value;
     }
 }
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this.courseCount++;
+    }
+}
 const durpin = new User("d@d.com", "durpintm");
 // durpin.city = "toronto";
