@@ -26,3 +26,23 @@ const getMoreProducts = (products) => {
     const myIndex = 5;
     return products[myIndex];
 };
+// function anotherFunction<T, U extends number>(
+//   valueOne: T,
+//   valueTwo: U
+// ): object {
+//   return { valueOne, valueTwo };
+// }
+function anotherFunction(valueOne, valueTwo) {
+    return { valueOne, valueTwo };
+}
+// anotherFunction(3, "4");
+// anotherFunction(3, 0.46);
+anotherFunction(3, { connection: "", username: "", password: "" });
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
